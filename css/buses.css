@@ -1,0 +1,249 @@
+
+/* =========================
+   TRAVELGO BUS RESULTS PAGE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fa;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+}
+
+nav h2 {
+    color: #d92332;
+    font-size: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d92332;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Journey Information */
+
+.journey-info {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+#journey {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d92332;
+    margin-bottom: 5px;
+}
+
+#travel-date {
+    color: #666;
+}
+
+/* Filter Section */
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.filter-section label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.filter-section select {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Bus Count */
+
+#bus-count {
+    font-weight: bold;
+    margin: 15px 0;
+    color: #555;
+}
+
+/* Bus Card */
+
+.bus-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+
+    border-left: 5px solid #d92332;
+    transition: 0.3s;
+}
+
+.bus-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.12);
+}
+
+.bus-card h3 {
+    font-size: 21px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.bus-card p {
+    margin: 7px 0;
+    color: #666;
+}
+
+/* Price */
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #d92332 !important;
+    margin-bottom: 12px;
+}
+
+/* Seat Button */
+
+.bus-card button {
+    padding: 12px 22px;
+    background: #d92332;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bus-card button:hover {
+    background: #ad1724;
+}
+
+/* No Buses Message */
+
+.no-buses {
+    background: #fff3f3;
+    color: #b00020;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .bus-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bus-card > div:last-child {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-section select {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    nav {
+        padding: 15px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    #journey {
+        font-size: 19px;
+    }
+
+    .bus-card {
+        padding: 18px;
+    }
+
+    .bus-card h3 {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 21px;
+    }
+
+    .bus-card button {
+        padding: 10px 14px;
+    }
+}

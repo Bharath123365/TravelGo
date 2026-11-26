@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo - Select Seats</title>
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body class="seat-page">
+
+    <header class="seat-header">
+        <h2>TravelGo<span>.</span></h2>
+        <a href="index.html">← Back to Home</a>
+    </header>
+
+    <main class="container">
+
+        <div class="seat-page-heading">
+            <p class="eyebrow">YOUR JOURNEY, YOUR CHOICE</p>
+            <h1>Select Your Seats</h1>
+            <p>Choose your preferred seats to continue booking.</p>
+        </div>
+
+        <div class="bus-info">
+            <h3 id="bus-name">Bus Details</h3>
+            <p id="bus-type"></p>
+            <p id="journey"></p>
+        </div>
+
+        <div class="seat-section">
+            <h3>Choose Your Seats</h3>
+            <p class="seat-instruction">Tap on available seats to select them.</p>
+
+            <div class="legend">
+                <span><i class="available"></i> Available</span>
+                <span><i class="selected"></i> Selected</span>
+                <span><i class="occupied"></i> Booked</span>
+            </div>
+
+            <div class="driver">DRIVER</div>
+
+            <div id="seat-layout" class="seat-layout"></div>
+        </div>
+
+        <div class="booking-summary">
+            <h3>Booking Summary</h3>
+
+            <p>Selected Seats: <span id="selected-seats">None</span></p>
+            <p>Price per seat: ₹<span id="seat-price">0</span></p>
+
+            <div class="summary-total">
+                <span>Total Amount</span>
+                <h2>₹<span id="total-price">0</span></h2>
+            </div>
+
+            <button id="continue-btn" onclick="continueBooking()">
+                Continue to Passenger Details →
+            </button>
+        </div>
+
+    </main>
+
+    <script src="js/seats.js"></script>
+</body>
+</html>

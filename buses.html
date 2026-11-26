@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelGo - Available Buses</title>
+    <link rel="stylesheet" href="css/buses.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>TravelGo</h2>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Available Buses</h1>
+
+        <div class="journey-info">
+            <p id="journey"></p>
+            <p id="travel-date"></p>
+        </div>
+
+        <section class="filter-section">
+            <div>
+                <label for="bus-filter">Bus Type:</label>
+                <select id="bus-filter">
+                    <option value="all">All Buses</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="sort-buses">Sort By:</label>
+                <select id="sort-buses">
+                    <option value="default">Recommended</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="departure">Earliest Departure</option>
+                </select>
+            </div>
+        </section>
+
+        <p id="bus-count"></p>
+        <div id="bus-list"></div>
+    </main>
+
+    <script src="js/buses.js"></script>
+</body>
+</html>

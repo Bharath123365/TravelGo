@@ -1,0 +1,347 @@
+/* =========================
+   TRAVELGO HOMEPAGE DESIGN
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #292929;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    background: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+}
+
+.logo {
+    color: #d92332;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d92332;
+}
+
+/* Hero Section */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(16, 44, 78, 0.15),
+            rgba(16, 44, 78, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    align-items: end;
+    gap: 12px;
+
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-box div {
+    flex: 1;
+    min-width: 140px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.search-box label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #ddd;
+    border-radius: 7px;
+
+    font-size: 14px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #d92332;
+    box-shadow: 0 0 4px rgba(217, 35, 50, 0.2);
+}
+
+/* Search Button */
+
+.search-box button:not(.swap-btn) {
+    padding: 14px 22px;
+
+    background: #d92332;
+    color: white;
+
+    border: none;
+    border-radius: 7px;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:not(.swap-btn):hover {
+    background: #ae1724;
+    transform: translateY(-2px);
+}
+
+/* Swap Button */
+
+.search-box .swap-btn {
+    padding: 12px 14px;
+
+    background: white;
+    color: #0b5ed7;
+
+    border: 1px solid #0b5ed7;
+    border-radius: 7px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box .swap-btn:hover {
+    background: #0b5ed7;
+    color: white;
+}
+
+/* Popular Destinations */
+
+.destinations {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 29px;
+    margin-bottom: 35px;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.destination-card {
+    background: white;
+    padding: 45px 15px;
+
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+    border-bottom: 4px solid #d92332;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.destination-card h3 {
+    color: #d92332;
+    font-size: 21px;
+}
+
+/* About Section */
+
+.about {
+    background: white;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.about p {
+    color: #555;
+    font-size: 17px;
+}
+
+/* Footer */
+
+footer {
+    background: #20232a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    line-height: 2;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .search-box {
+        flex-wrap: wrap;
+    }
+
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 55px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box div {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .search-box .swap-btn {
+        align-self: center;
+        width: auto;
+    }
+
+    .destinations {
+        padding: 45px 5%;
+    }
+
+    .about {
+        padding: 45px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 25px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .search-box {
+        padding: 18px;
+    }
+
+    .destination-container {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations h2 {
+        font-size: 24px;
+    }
+}
